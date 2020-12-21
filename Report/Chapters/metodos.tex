@@ -1,18 +1,58 @@
-\chapter{Materiais e Métodos}
+\chapter{Desenvolvimento}
 \label{chap:mat}
-\lipsum[1]
 
-\section{Metodologia}
-\label{sec:met}
-\lipsum[1]
+Neste capítulo será descrito cada desafio proposto pelos os orientadores e pesquisadores do CCRoSA durante o ano letivo e os materiais e métodos adotados para a concepção das soluções para cada um deles.
 
-%--------- NEW SECTION ----------------------
-\section{Interface do Usuário}
-\label{sec:ui}
-\lipsum[1]
+\section{Desafio 1.0 - Busca e navegação autônoma com o Husky.}
 
-%--------- NEW SECTION ----------------------
-\section{Simulação do sistema}
-\label{sec:sim}
-\lipsum[2-4]
+Este desafio teve como objetivo de realizar a simulaçao de uma determinada missão. Esta consistiu em realizar a navegação autônoma, no pátio do CIMATEC 4, com o \textit{Husky} da \textit{Clearpath Robotics} a fim de procurar e identificar uma bola amarela posta no mapa. Para concepção da solução foi utilizado o \textit{Robot Operating System (ROS)}, o \textit{software Gazebo} com auxilio da ferramenta de visualização \textit{Rviz}. 
+
+\section{Desafio 2.0 - Concepção de um manipulador robótico.}
+\label{sec:desafio2.0}
+
+A princípio o objetivo deste desafio foi construir um manipulador robótico e através da identificação de marcadores visuais realizar a tarefa de acionamento de um painel elétrico. Devido aos efeitos da COVID-19, as atividades presenciais no laboratório tiveram que ser suspensas, com isso, afetou diretamente na construção física do manipulador. Portanto, a solução entregue para este desafio foi realizada apenas em ambiente simulado. 
+
+Para concepção da solução foi formado um grupo que, além de mim, detinha mais três bolsistas do programa, entre eles, Jéssica Motta, Leonardo Mendes e Miguel Felipe. A modelagem 3D da estrutura física do manipulador foi feita no \textit{software OnShape}, o \textit{framework} de robótica e manipulação utilizado foi o \textit{ROS} e \textit{MoveIt}, respectivamente. Por fim, a simulação da tarefa foi realizada no \textit{software Gazebo} com auxilio da ferramenta de visualização \textit{Rviz}. 
+
+\section{Desafio 2.5 - Simular a marcha e corrida de revezamento com o Darwin-OP}
+\label{sec:desafio2.5}
+
+Partindo da necessidade de assimilar o conhecimento da interação entre robôs, compreender em profundidade os conceitos de simulação e o desenvolvimento da liderança em projetos os orientadores do laboratório lançaram este desafio. Ele consiste em utilizar 4 unidades da plataforma antropomórfica \textit{Darwin-OP} com 20 graus de liberdade (DoF) para realizar a simulação das seguintes missões: marchar em forma unida em linha e realizar uma corrida de revezamento. A seguir serão descritas as regras do desafio:
+
+\begin{itemize}
+  \item A marcha deverá ser realizada diante de um percurso de 2 metros;
+  \item A marcha e a corrida de revezamento deverão ser realizadas numa pista de corrida;
+  \item A corrida deverá ser realizada num percurso de 8 metros;
+  \item Cada Darwin-OP deverá percorrer 2 metros para realizar o revezamento;
+  \item A região de revezamento deverá ser uma área de até 0,4 metros;
+  \item O conceito para o revezamento será o de alinhar-se os dois Darwin-OP durante até 15 segundos a uma distância de no máximo 0.2 metros entre ambos, ou seja será considerado passagem de bastão quando os dois Darwin-OP passarem 15 segundos com movimentos sincronizados a uma distância máxima de 0.2 metros dentro da
+  região de revezamento;
+  \item A pista de corrida deverá ser considerada analogamente a uma pista real;
+  \item A lateral da pista deverá ter lados de 2 metros;
+  \item Considerar sempre os critérios de uma corrida de revezamento.
+\end{itemize}
+
+Seguindo estas regras, o mesmo grupo mencionado na seção \ref{sec:desafio2.0}, utilizou o \textit{framework (ROS)}, o \textit{software {Gazebo}} e a ferramenta de visualização \textit{Rviz} para concepção da solução.
+
+\section{Desafio - Análise estatística R\&R da simulação do robô Darwin OP}
+\label{sec:estudo_estatisticoRR}
+
+Este desafio teve o objetivo de aplicar os conceitos vistos durante os encontros semanais de estatística utilizando a ferramenta \textit{RStudio}. Por isso foi proposto pelo o orientador Marco Reis criar um sistema de medição para obter uma coleta de dados referente a marcha e a corrida de revezamento, conforme visto na seção \ref{sec:desafio2.5}. O método estatístico utilizado para verificar os possíveis erros e outras fontes de variabilidade do sistema de medição foi a analise de variância (ANOVA), com isso, obter as informações de repetibilidade e reprodutibilidade (R\&R).
+
+
+\section{Desafio 2.2 - Montagem física do manipulador robótico}
+\label{sec:desafio2.2}
+
+No dia 8 de setembro de 2020, seguindo todas as recomendações da Organização Mundial de Saúde (OMS), foi retomado as atividades presenciais do laboratório. Com isso foi dado continuidade ao desafio visto na seção \ref{sec:desafio2.0}, ou seja, o objetivo era realizar a montagem física do manipulador para executar a tarefa de acionamento do painel elétrico em ambiente real.
+
+Para o desenvolvimento desta solução, devido algumas circunstâncias, foi adicionado ao grupo visto nas seções anteriores mais dois bolsistas: Jean Paulo e Rodrigo Formiga. Os materiais utilizados foram: perfis de alumínio, uma base que era composta por um duplo perfil em madeira fixado por duas hastes de ferro, motores \textit{Dynamixel}, câmera RGB e cabos para comunicação e alimentação elétrica. Além disso, foi necessário modelar e imprimir peças de ABS na impressora 3D do laboratório.
+
+\section{Desafio - Planejamento de Experimentos (DOE)}
+\label{sec:DOE}
+
+Este desafio teve como objetivo de aplicar os conceitos de Planejamento de Experimento, do inglês \textit{Design of Experiments (DOE)}, a um modelo de helicóptero de papel. O propósito principal deste estudo foi  identificar quais são os fatores que mais influenciam no tempo de voo e como estas variáveis podem melhorar o desempenho do sistema. Os testes consistiu em medir o tempo de voo em duas alturas diferentes, além disto, foram adicionados adesivos e um clipe em na estrutura do helicóptero a fim de verificar a influência da variação destes parâmetros no resultado final. Para realizar o estudo estatístico dos dados obtidos durante os testes, foi utilizada a ferramenta R, uma linguagem de programação voltada à manipulação, análise e visualização de dados.
+
+\section{Desafio 3 - \textit{Warthog bomb mission}}
+
+O problema proposto consistiu em utilizar o manipulador robótico, conforme visto na seção \ref{sec:desafio2.2}, integrado a plataforma móvel \textit{Warthog} da \textit{Clearpath Robotics} afim de realizar a missão de navegação, mapeamento, localização, busca e ``desarme'' de uma ``bomba'' no pátio do CIMATEC 4 de forma autônoma. Para concepção da solução foi formado uma equipe que além de mim contava com mais dois bolsistas: Pedro Tecchio e Jean Paulo. Foi utilizado o \textit{Simultaneous Localization and Mapping (SLAM)} \textit{Cartographer} da \textit{Google LLC} em conjunto com os seguintes sensores: \textit{Light Detection And Ranging} (LIDAR), \textit{Global Positioning System} (GPS) e uma câmera RGB. Também utilizou-se o \textit{software Gazebo}, a ferramenta de visualização \textit{Rviz} e o \textit{framework MoveIt} para concepção da solução.
 
