@@ -112,6 +112,7 @@
 \usepackage{lipsum}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{pdfpages}
 %
 \makeindex 
 \setlength{\LTcapwidth}{\textwidth}
@@ -206,17 +207,33 @@
 % ----------------------------------------------------------------------------
 % Include thesis appendices
     \begin{thesisappendices}
-        \include{Appendices/diagmec}
-        \include{Appendices/diagele}
-        \include{Appendices/logbook}
+        \chapter{Certificado de participação do V Seminário de Pesquisa Científica e Tecnológica (SAPCT) e IV Workshop de Integração e Capacitação em Processamento de Alto Desempenho(ICPAD).}
+        \label{appen:sapct}
+        \includepdf[scale = 0.8, angle = 90]{Appendices/participacaosapct.pdf}
+
+        \chapter{Certificado de submissão do resumo expandido - Manipulador Robótico - TIMON-HM no V Seminário de Pesquisa Científica e Tecnológica (SAPCT) e IV Workshop de Integração e Capacitação em Processamento de Alto Desempenho(ICPAD).}
+        \label{appen:resume_timon}
+        \includepdf[scale = 0.8,angle = 90, pagecommand={} ]{Appendices/CertificadoSAPCT.pdf}
+
+        \chapter{UGV MOCÓ: ROBÔ AUTÔNOMO TERRESTRE PARADESINFECÇÃO DE AMBIENTES}
+        \label{appen:ugv}
+        \includepdf[pages={1-60}]{Appendices/Relatorio_parcial_UGV-M.pdf}
+
+        \chapter{Artigo publicado PERSPECTIVES ON AUTONOMOUS UNMANNED GROUND VEHICLES: A SURVEY}
+        \label{appen:ugv_artigo}
+        \includepdf[pages={1-8}]{Appendices/sintec.pdf}
+
+        \chapter{Certificado de publicação do artigo PERSPECTIVES ON AUTONOMOUS UNMANNED GROUND VEHICLES: A SURVEY}
+        \label{appen:ugv_certificado}
+        \includepdf[pages={1}, angle = 90, scale = 0.8]{Appendices/CertificadoVISIINTEC.pdf}
     \end{thesisappendices}
 %
 % ----------------------------------------------------------------------------
 % Configurar as referencias bibliograficas
-	\renewcommand\bibname{Referências}
-    \addcontentsline{toc}{chapter}{Referências}
-    \bibliography{References/referencias}
-%
+% 	\renewcommand\bibname{Referências}
+%     \addcontentsline{toc}{chapter}{Referências}
+%     \bibliography{References/referencias}
+% %
 % ----------------------------------------------------------------------------
 % Finishing him
     \include{Others/ultimafolha}
