@@ -6,9 +6,9 @@ The purpose of this document is to present all the activities developed during t
 The good presentation doc must have:
         
 1. Introduction
-2. Basis
-3. Methods
-4. Results and analysis
+2. DevelopmentBasis
+3. Methodology
+4. Results
 5. Conclusion
 
 If you do not have Latex installed on your computer, follow the instructions below.
