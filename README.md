@@ -6,7 +6,7 @@ The purpose of this document is to present all the activities developed during t
 The good presentation doc must have:
         
 1. Introduction
-2. DevelopmentBasis
+2. Development
 3. Methodology
 4. Results
 5. Conclusion
